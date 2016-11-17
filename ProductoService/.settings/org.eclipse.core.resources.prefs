@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//src/bancoabc/www/producto/ConsultaSaldoRequest.java=UTF-8
+encoding//src/bancoabc/www/producto/ConsultaSaldoResponse.java=UTF-8
+encoding//src/bancoabc/www/producto/ConsultarProductosRequest.java=UTF-8
+encoding//src/bancoabc/www/producto/ConsultarProductosResponse.java=UTF-8
+encoding//src/bancoabc/www/producto/Producto.java=UTF-8
+encoding//src/bancoabc/www/producto/ProductoRequest.java=UTF-8
+encoding//src/bancoabc/www/producto/ProductoResponse.java=UTF-8
+encoding//src/bancoabc/www/producto/ProductoSOAPImpl.java=UTF-8
+encoding//src/bancoabc/www/producto/ProductoSOAPSkeleton.java=UTF-8
+encoding//src/bancoabc/www/producto/ProductoSOAPStub.java=UTF-8
+encoding//src/bancoabc/www/producto/ProductoService.java=UTF-8
+encoding//src/bancoabc/www/producto/ProductoServiceLocator.java=UTF-8
+encoding//src/bancoabc/www/producto/ProductosPagoInterface.java=UTF-8
+encoding//src/bancoabc/www/producto/ResultadoServicio.java=UTF-8

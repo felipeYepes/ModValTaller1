@@ -1,0 +1,90 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from productoService WSDL service -->
+
+  <service name="productoSOAP" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.bancoabc/producto/"/>
+      <parameter name="wsdlServiceElement" value="productoService"/>
+      <parameter name="schemaQualified" value="http://www.bancoabc/producto/"/>
+      <parameter name="wsdlServicePort" value="productoSOAP"/>
+      <parameter name="className" value="bancoabc.www.producto.ProductoSOAPSkeleton"/>
+      <parameter name="wsdlPortType" value="ProductosPagoInterface"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/producto/"
+        qname="ns:>consultaSaldoResponse"
+        type="java:bancoabc.www.producto.ConsultaSaldoResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/producto/"
+        qname="ns:productoRequest"
+        type="java:bancoabc.www.producto.ProductoRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/producto/"
+        qname="ns:productoResponse"
+        type="java:bancoabc.www.producto.ProductoResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/producto/"
+        qname="ns:>consultaSaldoRequest"
+        type="java:bancoabc.www.producto.ConsultaSaldoRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/producto/"
+        qname="ns:>consultarProductosRequest"
+        type="java:bancoabc.www.producto.ConsultarProductosRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/producto/"
+        qname="ns:resultadoServicio"
+        type="java:bancoabc.www.producto.ResultadoServicio"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/producto/"
+        qname="ns:Producto"
+        type="java:bancoabc.www.producto.Producto"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/producto/"
+        qname="ns:>consultarProductosResponse"
+        type="java:bancoabc.www.producto.ConsultarProductosResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>
