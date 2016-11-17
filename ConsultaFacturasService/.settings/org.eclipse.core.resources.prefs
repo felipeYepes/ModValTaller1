@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//src/org/example/www/factura/Factura.java=UTF-8
+encoding//src/org/example/www/factura/FacturaInterface.java=UTF-8
+encoding//src/org/example/www/factura/FacturaSOAPImpl.java=UTF-8
+encoding//src/org/example/www/factura/FacturaSOAPSkeleton.java=UTF-8
+encoding//src/org/example/www/factura/FacturaSOAPStub.java=UTF-8
+encoding//src/org/example/www/factura/FacturaService.java=UTF-8
+encoding//src/org/example/www/factura/FacturaServiceLocator.java=UTF-8
+encoding//src/org/example/www/factura/ObtenerListaFacturasRequest.java=UTF-8
+encoding//src/org/example/www/factura/ObtenerListaFacturasResponse.java=UTF-8
+encoding//src/org/example/www/factura/RespuestaFactura.java=UTF-8
+encoding//src/org/example/www/factura/RespuestaServicio.java=UTF-8

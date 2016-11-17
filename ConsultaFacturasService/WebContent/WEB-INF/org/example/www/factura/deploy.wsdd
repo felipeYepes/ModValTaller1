@@ -1,0 +1,66 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from FacturaService WSDL service -->
+
+  <service name="facturaSOAP" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.example.org/factura/"/>
+      <parameter name="wsdlServiceElement" value="FacturaService"/>
+      <parameter name="schemaUnqualified" value="http://www.example.org/factura/"/>
+      <parameter name="wsdlServicePort" value="facturaSOAP"/>
+      <parameter name="className" value="org.example.www.factura.FacturaSOAPSkeleton"/>
+      <parameter name="wsdlPortType" value="FacturaInterface"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://www.example.org/factura/"
+        qname="ns:>obtenerListaFacturasResponse"
+        type="java:org.example.www.factura.ObtenerListaFacturasResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.example.org/factura/"
+        qname="ns:RespuestaFactura"
+        type="java:org.example.www.factura.RespuestaFactura"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.example.org/factura/"
+        qname="ns:RespuestaServicio"
+        type="java:org.example.www.factura.RespuestaServicio"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.example.org/factura/"
+        qname="ns:Factura"
+        type="java:org.example.www.factura.Factura"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.example.org/factura/"
+        qname="ns:>obtenerListaFacturasRequest"
+        type="java:org.example.www.factura.ObtenerListaFacturasRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>
