@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/bancoabc/www/cliente/RespuestaCliente.java=UTF-8
+encoding//src/bancoabc/www/cliente/ResultadoServicio.java=UTF-8
+encoding//src/bancoabc/www/cliente/ValidaClienteInteface.java=UTF-8
+encoding//src/bancoabc/www/cliente/ValidaClienteRequest.java=UTF-8
+encoding//src/bancoabc/www/cliente/ValidarClienteRequest.java=UTF-8
+encoding//src/bancoabc/www/cliente/ValidarClienteSOAPImpl.java=UTF-8
+encoding//src/bancoabc/www/cliente/ValidarClienteSOAPSkeleton.java=UTF-8
+encoding//src/bancoabc/www/cliente/ValidarClienteSOAPStub.java=UTF-8
+encoding//src/bancoabc/www/cliente/ValidarClienteService.java=UTF-8
+encoding//src/bancoabc/www/cliente/ValidarClienteServiceLocator.java=UTF-8

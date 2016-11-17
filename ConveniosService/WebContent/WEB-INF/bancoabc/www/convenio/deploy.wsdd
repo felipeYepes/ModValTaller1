@@ -1,0 +1,74 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ConvenioService WSDL service -->
+
+  <service name="convenioSOAP" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.bancoabc/convenio/"/>
+      <parameter name="wsdlServiceElement" value="ConvenioService"/>
+      <parameter name="schemaQualified" value="http://www.bancoabc/convenio/"/>
+      <parameter name="wsdlServicePort" value="convenioSOAP"/>
+      <parameter name="className" value="bancoabc.www.convenio.ConvenioServiceSkeleton"/>
+      <parameter name="wsdlPortType" value="ConvenioInterface"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/convenio/"
+        qname="ns:ConvenioRequest"
+        type="java:bancoabc.www.convenio.ConvenioRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/convenio/"
+        qname="ns:RespuestaServicio"
+        type="java:bancoabc.www.convenio.RespuestaServicio"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/convenio/"
+        qname="ns:>consultaConveniosRequest"
+        type="java:bancoabc.www.convenio.ConsultaConveniosRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/convenio/"
+        qname="ns:ConvenioRespuesta"
+        type="java:bancoabc.www.convenio.ConvenioRespuesta"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/convenio/"
+        qname="ns:>consultaConveniosResponse"
+        type="java:bancoabc.www.convenio.ConsultaConveniosResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/convenio/"
+        qname="ns:Convenio"
+        type="java:bancoabc.www.convenio.Convenio"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

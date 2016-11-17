@@ -1,0 +1,58 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ValidarClienteService WSDL service -->
+
+  <service name="ValidarClientePort" provider="java:RPC" style="document" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.bancoabc/cliente/"/>
+      <parameter name="wsdlServiceElement" value="ValidarClienteService"/>
+      <parameter name="schemaQualified" value="http://www.bancoabc/cliente/"/>
+      <parameter name="wsdlServicePort" value="ValidarClientePort"/>
+      <parameter name="className" value="bancoabc.www.cliente.ValidarClienteSOAPSkeleton"/>
+      <parameter name="wsdlPortType" value="ValidaClienteInteface"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/cliente/"
+        qname="ns:ResultadoServicio"
+        type="java:bancoabc.www.cliente.ResultadoServicio"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/cliente/"
+        qname="ns:>validarClienteRequest"
+        type="java:bancoabc.www.cliente.ValidarClienteRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/cliente/"
+        qname="ns:ValidaClienteRequest"
+        type="java:bancoabc.www.cliente.ValidaClienteRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.bancoabc/cliente/"
+        qname="ns:RespuestaCliente"
+        type="java:bancoabc.www.cliente.RespuestaCliente"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

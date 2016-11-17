@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//src/bancoabc/www/convenio/ConsultaConveniosRequest.java=UTF-8
+encoding//src/bancoabc/www/convenio/ConsultaConveniosResponse.java=UTF-8
+encoding//src/bancoabc/www/convenio/Convenio.java=UTF-8
+encoding//src/bancoabc/www/convenio/ConvenioInterface.java=UTF-8
+encoding//src/bancoabc/www/convenio/ConvenioRequest.java=UTF-8
+encoding//src/bancoabc/www/convenio/ConvenioRespuesta.java=UTF-8
+encoding//src/bancoabc/www/convenio/ConvenioService.java=UTF-8
+encoding//src/bancoabc/www/convenio/ConvenioServiceImpl.java=UTF-8
+encoding//src/bancoabc/www/convenio/ConvenioServiceLocator.java=UTF-8
+encoding//src/bancoabc/www/convenio/ConvenioServiceSkeleton.java=UTF-8
+encoding//src/bancoabc/www/convenio/ConvenioServiceStub.java=UTF-8
+encoding//src/bancoabc/www/convenio/RespuestaServicio.java=UTF-8
