@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//src/bancoabc/www/login/AutenticarRequest.java=UTF-8
+encoding//src/bancoabc/www/login/AutenticarRespuesta.java=UTF-8
+encoding//src/bancoabc/www/login/AutenticarUsuarioRequest.java=UTF-8
+encoding//src/bancoabc/www/login/AutenticarUsuarioResponse.java=UTF-8
+encoding//src/bancoabc/www/login/EstadoServicio.java=UTF-8
+encoding//src/bancoabc/www/login/LoginInterface.java=UTF-8
+encoding//src/bancoabc/www/login/LoginInterfaceLocator.java=UTF-8
+encoding//src/bancoabc/www/login/LoginServiceImpl.java=UTF-8
+encoding//src/bancoabc/www/login/LoginServiceSkeleton.java=UTF-8
+encoding//src/bancoabc/www/login/LoginServiceStub.java=UTF-8
+encoding//src/bancoabc/www/login/LoginUsuarioInterface.java=UTF-8
