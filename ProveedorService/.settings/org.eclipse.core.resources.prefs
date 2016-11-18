@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/bancoabc/www/proveedor/Proveedor.java=UTF-8
+encoding//src/bancoabc/www/proveedor/ProveedorRequest.java=UTF-8
+encoding//src/bancoabc/www/proveedor/ProveedorRespuesta.java=UTF-8
+encoding//src/bancoabc/www/proveedor/ProveedorSOAPImpl.java=UTF-8
+encoding//src/bancoabc/www/proveedor/ProveedorSOAPSkeleton.java=UTF-8
+encoding//src/bancoabc/www/proveedor/ProveedorSOAPStub.java=UTF-8
+encoding//src/bancoabc/www/proveedor/Proveedor_PortType.java=UTF-8
+encoding//src/bancoabc/www/proveedor/Proveedor_Service.java=UTF-8
+encoding//src/bancoabc/www/proveedor/Proveedor_ServiceLocator.java=UTF-8
+encoding//src/bancoabc/www/proveedor/RespuestaServicio.java=UTF-8

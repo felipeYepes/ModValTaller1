@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.bancoabc/proveedor/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="proveedor" targetNamespace="http://www.bancoabc/proveedor/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.bancoabc/proveedor/"  elementFormDefault="qualified">
+      <xsd:element name="AgregarProveedor">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="proveedor" type="tns:proveedorRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AgregarProveedorResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="tns:ProveedorRespuesta"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarProvedor">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="in" type="tns:proveedorRequest"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="consultarProvedorResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="tns:ProveedorRespuesta"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EliminarProveedor">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="in" type="tns:proveedorRequest"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EliminarProveedorResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="tns:ProveedorRespuesta"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ModificarProveedor">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="in" type="tns:proveedorRequest"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ModificarProveedorResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="tns:ProveedorRespuesta"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="asociarConvenio">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="in" type="tns:proveedorRequest"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+      <xsd:element name="asociarConvenioResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="out" type="tns:ProveedorRespuesta"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+    
+      <xsd:complexType name="Proveedor">
+      	<xsd:sequence>
+      		<xsd:element name="codigoProveedor" type="xsd:string"></xsd:element>
+      		<xsd:element name="nombreProveedor" type="xsd:string"></xsd:element>
+      		<xsd:element name="codigoConvenio" type="xsd:string"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+      <xsd:complexType name="proveedorRequest">
+      	<xsd:sequence>
+      		<xsd:element name="proveedor" type="tns:Proveedor"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+    
+        
+            <xsd:complexType name="ProveedorRespuesta">
+            	<xsd:sequence>
+            		<xsd:element name="respuesta" type="tns:RespuestaServicio"></xsd:element>
+            		<xsd:element name="proveedores" type="tns:Proveedor" minOccurs="0" maxOccurs="unbounded"></xsd:element>
+            	</xsd:sequence>
+            </xsd:complexType>
+    
+            <xsd:complexType name="RespuestaServicio">
+            	<xsd:sequence>
+            		<xsd:element name="codigo" type="xsd:string"></xsd:element>
+            		<xsd:element name="descripcion" type="xsd:string"></xsd:element>
+            	</xsd:sequence>
+            </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AgregarProveedorRequest">
+    <wsdl:part element="tns:AgregarProveedor" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="AgregarProveedorResponse">
+    <wsdl:part element="tns:AgregarProveedorResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="consultarProvedorRequest">
+  	<wsdl:part name="parameters" element="tns:consultarProvedor"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarProvedorResponse">
+  	<wsdl:part name="parameters" element="tns:consultarProvedorResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="EliminarProveedorRequest">
+  	<wsdl:part name="parameters" element="tns:EliminarProveedor"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="EliminarProveedorResponse">
+  	<wsdl:part name="parameters" element="tns:EliminarProveedorResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ModificarProveedorRequest">
+  	<wsdl:part name="parameters" element="tns:ModificarProveedor"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ModificarProveedorResponse">
+  	<wsdl:part name="parameters" element="tns:ModificarProveedorResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="asociarConvenioRequest">
+  	<wsdl:part name="parameters" element="tns:asociarConvenio"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="asociarConvenioResponse">
+  	<wsdl:part name="parameters" element="tns:asociarConvenioResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="proveedor">
+    <wsdl:operation name="AgregarProveedor">
+      <wsdl:input message="tns:AgregarProveedorRequest"/>
+      <wsdl:output message="tns:AgregarProveedorResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="consultarProvedor">
+    	<wsdl:input message="tns:consultarProvedorRequest"></wsdl:input>
+    	<wsdl:output message="tns:consultarProvedorResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProveedor">
+    	<wsdl:input message="tns:EliminarProveedorRequest"></wsdl:input>
+    	<wsdl:output message="tns:EliminarProveedorResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificarProveedor">
+    	<wsdl:input message="tns:ModificarProveedorRequest"></wsdl:input>
+    	<wsdl:output message="tns:ModificarProveedorResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="asociarConvenio">
+    	<wsdl:input message="tns:asociarConvenioRequest"></wsdl:input>
+    	<wsdl:output message="tns:asociarConvenioResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="proveedorSOAP" type="tns:proveedor">
+  	<soap:binding style="document"
+  		transport="http://schemas.xmlsoap.org/soap/http" />
+  	<wsdl:operation name="AgregarProveedor">
+  		<soap:operation
+  			soapAction="http://www.bancoabc/proveedor/AgregarProveedor" />
+  		<wsdl:input>
+  			<soap:body use="literal" />
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal" />
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="consultarProvedor">
+  		<soap:operation
+  			soapAction="http://www.bancoabc/proveedor/consultarProvedor" />
+  		<wsdl:input>
+  			<soap:body use="literal" />
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal" />
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="EliminarProveedor">
+  		<soap:operation
+  			soapAction="http://www.bancoabc/proveedor/EliminarProveedor" />
+  		<wsdl:input>
+  			<soap:body use="literal" />
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal" />
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="ModificarProveedor">
+  		<soap:operation
+  			soapAction="http://www.bancoabc/proveedor/ModificarProveedor" />
+  		<wsdl:input>
+  			<soap:body use="literal" />
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal" />
+  		</wsdl:output>
+  	</wsdl:operation>
+  	<wsdl:operation name="asociarConvenio">
+  		<soap:operation
+  			soapAction="http://www.bancoabc/proveedor/asociarConvenio" />
+  		<wsdl:input>
+  			<soap:body use="literal" />
+  		</wsdl:input>
+  		<wsdl:output>
+  			<soap:body use="literal" />
+  		</wsdl:output>
+  	</wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="proveedor">
+    <wsdl:port binding="tns:proveedorSOAP" name="proveedorSOAP">
+      <soap:address location="http://localhost:8080/ProveedorService/services/proveedorSOAP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
